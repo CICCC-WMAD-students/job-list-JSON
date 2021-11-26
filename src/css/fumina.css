@@ -1,0 +1,112 @@
+.l-jobs {
+  padding: 100px 0;
+}
+
+.l-jobs__container {
+  width: 90%;
+  background-color: white;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.l-jobs__container__details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 30px;
+}
+
+.l-jobs__container__details__logo {
+  display: inline-block;
+  width: 88px;
+  height: 88px;
+  margin-right: 1rem;
+}
+
+.l-jobs__container__details__wrap__tags {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 0.5rem;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.l-jobs__container__details__wrap__tags__company {
+  color: green;
+  margin-right: 20px;
+}
+
+.l-jobs__container__details__wrap__tags__new {
+  background-color: green;
+  color: white;
+  border-radius: 20px;
+  padding: 5px 10px;
+  margin-right: 5px;
+}
+
+.l-jobs__container__details__wrap__tags__featured {
+  background-color: gray;
+  color: white;
+  border-radius: 20px;
+  padding: 5px 10px;
+}
+
+.l-jobs__container__details__wrap__position {
+  margin-bottom: 0.5rem;
+  font-size: 18px;
+  font-weight: 900;
+  color: green;
+}
+
+.l-jobs__container__details__wrap__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 14px;
+  color: gray;
+}
+
+.l-jobs__container__skills {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 20px;
+}
+
+.l-jobs__container__skills li {
+  background-color: #b8ffb8;
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin-right: 10px;
+  color: green;
+  font-size: 14px;
+}
+/*# sourceMappingURL=fumina.css.map */
