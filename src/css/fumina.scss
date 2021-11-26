@@ -1,0 +1,81 @@
+.l-jobs {
+  padding: 100px 0;
+  &__container {
+    width: 90%;
+    background-color: white;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+
+    &__details {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 30px;
+
+      &__logo {
+        display: inline-block;
+        width: 88px;
+        height: 88px;
+        margin-right: 1rem;
+      }
+
+      &__wrap {
+        &__tags {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 0.5rem;
+          font-size: 12px;
+          font-weight: 900;
+
+          &__company {
+            color: green;
+            margin-right: 20px;
+          }
+          &__new {
+            background-color: green;
+            color: white;
+            border-radius: 20px;
+            padding: 5px 10px;
+            margin-right: 5px;
+          }
+          &__featured {
+            background-color: gray;
+            color: white;
+            border-radius: 20px;
+            padding: 5px 10px;
+          }
+        }
+        &__position {
+          margin-bottom: 0.5rem;
+          font-size: 18px;
+          font-weight: 900;
+          color: green;
+        }
+        &__info {
+          display: flex;
+          justify-content: space-between;
+          font-size: 14px;
+          color: gray;
+        }
+      }
+    }
+
+    &__skills {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-right: 20px;
+    }
+    &__skills li {
+      background-color: rgb(184, 255, 184);
+      border-radius: 5px;
+      padding: 5px 10px;
+      margin-right: 10px;
+      color: green;
+      font-size: 14px;
+    }
+  }
+}
