@@ -8,12 +8,36 @@
     <meta charset="utf-8" />
     <link href="./css/style.css" rel="stylesheet" />
     <link href="./css/grids.css" rel="stylesheet" />
+    <link href="./css/fumina.css" rel="stylesheet" />
+    <link href="./css/destyle.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="./js/script.js"></script>
   </head>
   <body>
     <header class="header"></header>
+
     <main>
+      <div class="filter">
+        <!-- <input
+          type="text"
+          class="filter__field"
+          placeholder="Search for jobs..."
+        /> -->
+        <div class="filter__element_container">
+          <div class="filter__element_name">Frontend</div>
+          <button class="filter__element_delete">
+            <span class="material-icons"> clear </span>
+          </button>
+        </div>
+        <button class="filter__clear_btn">
+          <span>clear</span>
+        </button>
+      </div>
+
       <div class="container">
         <ul class="items">
           <li class="item-list">1</li>
@@ -21,7 +45,9 @@
           <li class="item-list">3</li>
           <li class="item-list">4</li>
         </ul>
-      </div>
+      </div> -->
+      <!-- json -->
+      <div class="l-jobs" id="jobsTable"></div>
     </main>
     <footer></footer>
   </body>
