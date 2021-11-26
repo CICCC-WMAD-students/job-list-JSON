@@ -3,7 +3,6 @@
 /*
 01_ get json data and output html
 */
-
 async function getJson() {
   const response = await fetch("../../data.json");
   const data = await response.json();
@@ -100,7 +99,6 @@ async function getJson() {
     jobsTable.appendChild(jobCard);
   }
 }
-
 getJson();
 
 /*
@@ -110,3 +108,24 @@ getJson();
 /*
 03_ sort by cliking on the tags
 */
+
+//languages html-css-javascript-python-ruby
+const btnLanguages = document.querySelectorAll(".l-jobs__container__skills ul");
+
+let selected;
+
+// for (let i = 0; i < btnLanguages.length; i++) {
+//   btnLanguages[i].addEventListener('click', function() {
+
+//     selected = this.className;
+
+//     for (let j = 0; j < )
+
+//   })
+// }
+
+//tools
+
+//level
+
+//role
