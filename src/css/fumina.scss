@@ -8,7 +8,7 @@ body {
   width: 100%;
 }
 .l-jobs {
-  padding: 100px 0;
+  padding: 50px 0;
   &__container {
     width: 80%;
     background-color: white;
@@ -98,8 +98,16 @@ body {
   }
 }
 
+.display {
+  display: block;
+}
+
+.none {
+  display: none;
+}
+
 //PC
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 376px) {
   .l-header {
     background-image: url("../images/bg-header-desktop.svg");
     height: 7rem;
