@@ -17,6 +17,7 @@
     <link href="./css/grids.css" rel="stylesheet" />
     <link href="./css/fumina.css" rel="stylesheet" />
     <link href="./css/destyle.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/filter.css" />
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
@@ -46,14 +47,78 @@
         </button>
       </div>
 
-      <div class="container">
-        <ul class="items">
-          <li class="item-list">1</li>
-          <li class="item-list">2</li>
-          <li class="item-list">3</li>
-          <li class="item-list">4</li>
-        </ul>
-      </div> -->
+      <!-- Dropdown filter by location -->
+      <section class="dropdown-filter">
+        <div class="dropdown-filter__container">
+          <div class="dropdown-filter__title-container">
+            <button class="dropdown-filter__button">Role</button>
+            <img
+              src="./images/arrow_drop_down_black_24dp.svg"
+              alt="arrow_drop_down"
+            />
+          </div>
+          <div class="dropdown-filter__contents">
+            <ul>
+              <li>Frontend</li>
+              <li>Backend</li>
+              <li>Fullstack</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="dropdown-filter__container">
+          <div class="dropdown-filter__title-container">
+            <button class="dropdown-filter__button">Level</button>
+            <img
+              src="./images/arrow_drop_down_black_24dp.svg"
+              alt="arrow_drop_down"
+            />
+          </div>
+          <div class="dropdown-filter__contents">
+            <ul>
+              <li>Junior</li>
+              <li>Midweight</li>
+              <li>Senior</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="dropdown-filter__container">
+          <div class="dropdown-filter__title-container">
+            <button class="dropdown-filter__button">Contract</button>
+            <img
+              src="./images/arrow_drop_down_black_24dp.svg"
+              alt="arrow_drop_down"
+            />
+          </div>
+          <div class="dropdown-filter__contents">
+            <ul>
+              <li>Full Time</li>
+              <li>Part Time</li>
+              <li>Contract</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="dropdown-filter__container">
+          <div class="dropdown-filter__title-container">
+            <button class="dropdown-filter__button">Location</button>
+            <img
+              src="./images/arrow_drop_down_black_24dp.svg"
+              alt="arrow_drop_down"
+            />
+          </div>
+          <div class="dropdown-filter__contents">
+            <ul>
+              <li>USA Only</li>
+              <li>UK Only</li>
+              <li>Worldwide</li>
+              <li>Remote</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
       <!-- json -->
       <div class="l-jobs" id="jobsTable"></div>
     </main>
