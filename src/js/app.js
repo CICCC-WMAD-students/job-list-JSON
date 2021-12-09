@@ -175,6 +175,7 @@ input.focus();
 /* Implementing Filters */
 const dropdownButtons = document.querySelectorAll('.arrow-button');
 const dropdownContent = document.querySelectorAll('.dropdown');
+const dropdownLi = document.getElementsByTagName('li');
 
 /* When the user clicks on the button,
 toggle between hiding and showing the dropdown content */
@@ -183,3 +184,20 @@ for (let i = 0; i < dropdownButtons.length; i++) {
     dropdownContent[i].classList.toggle('show');
   });
 }
+
+/* When the user clicks the dropdown content, 
+stick the same background color as when it's hovered */
+let selectedContent;
+
+for (let i = 0; i < dropdownLi.length; i++) {
+  dropdownLi[i].addEventListener('click', () => {
+    dropdownLi[i].style.backgroundColor = '#eef6f6';
+    selectedContent = dropdownLi[i].textContent;
+    console.log(selectedContent);
+  });
+}
+
+/* Show the job list filtered by chosen contents */
+const filterByDropdown = content => {
+    
+};
