@@ -1,70 +1,74 @@
 .dropdown-filter {
-    margin-top: 3rem;
-    margin-right: auto;
-    margin-left: auto;
-    padding-left: 3rem;
-    padding-right: 3rem;
-    display: flex;
-    justify-content: center;
+  margin-top: 3rem;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  display: flex;
+  justify-content: center;
 }
 
 .dropdown-role__container,
 .dropdown-level__container,
-.dropdown-contact__container,
+.dropdown-contract__container,
 .dropdown-location__container {
-    width: 20%;
-    padding-right: .5rem;
-    padding-left: .5rem;
+  width: 20%;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
 }
 
 .dropdown-role__title-container,
 .dropdown-level__title-container,
-.dropdown-contact__title-container,
+.dropdown-contract__title-container,
 .dropdown-location__title-container {
-    padding: .5rem;
-    background-color: #FFFFFF;
-    color: #5ea4a4;
-    display: flex;
-    justify-content: space-between;
-    align-content: center;
-    border-radius: 5px;
+  padding: 0.5rem;
+  background-color: #ffffff;
+  color: #5ea4a4;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  border-radius: 5px;
 }
 
 .dropdown-role__button,
-.dropdown-level__button
-.dropdown-contact__button
-.dropdown-location__button {
-    font-size: 1.2rem;
+.dropdown-level__button .dropdown-contract__button .dropdown-location__button {
+  font-size: 1.2rem;
+  cursor: pointer;
 }
 
 .dropdown-role__contents,
 .dropdown-level__contents,
-.dropdown-contact__contents,
+.dropdown-contract__contents,
 .dropdown-location__contents {
-    display: none;
-    background-color: #FFFFFF;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
+  display: none;
+  background-color: #ffffff;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
+
 
 .dropdown-role__contents ul,
 .dropdown-level__contents ul,
-.dropdown-contact__contents ul,
+.dropdown-contract__contents ul,
 .dropdown-location__contents ul {
-    padding: .5rem 1rem;
+  padding: 0.5rem 1rem;
 }
 
 .dropdown-role__contents li,
 .dropdown-level__contents li,
-.dropdown-contact__contents li,
+.dropdown-contract__contents li,
 .dropdown-location__contents li {
-    padding: .2rem;
-    cursor: pointer;
+  padding: 0.2rem;
+  cursor: pointer;
 }
 
 .dropdown-role__contents li:hover,
 .dropdown-level__contents li:hover,
-.dropdown-contact__contents li:hover,
+.dropdown-contract__contents li:hover,
 .dropdown-location__contents li:hover {
     background-color: #eef6f6;
+}
+
+.show {
+  display: block;
 }
