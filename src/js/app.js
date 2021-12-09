@@ -4,6 +4,7 @@
 -----------------------------------
 01_ get json data and output html
 -----------------------------------
+*/
 
 const jobsList = document.getElementById("jobsList");
 const searchBar = document.getElementById("searchBar");
@@ -104,12 +105,11 @@ const displayJobs = (jobs) => {
 
 loadjobs();
 
-*/
-
 /*
 -----------------------------------
 02_ Searching field
 -----------------------------------
+*/
 
 const tagContainer = document.querySelector(".filter");
 const input = document.querySelector(".filter input");
@@ -166,7 +166,6 @@ document.addEventListener("click", (e) => {
 });
 
 input.focus();
-*/
 
 /*-------------------------------------------------*/
 /*-------------------------------------------------*/
@@ -187,17 +186,21 @@ for (let i = 0; i < dropdownButtons.length; i++) {
 
 /* When the user clicks the dropdown content, 
 stick the same background color as when it's hovered */
-let selectedContent;
+let selectedContent = [];
 
 for (let i = 0; i < dropdownLi.length; i++) {
   dropdownLi[i].addEventListener('click', () => {
-    dropdownLi[i].style.backgroundColor = '#eef6f6';
-    selectedContent = dropdownLi[i].textContent;
+    dropdownLi[i].classList.toggle('selected');
+    selectedContent.push(dropdownLi[i].textContent);
     console.log(selectedContent);
   });
 }
 
 /* Show the job list filtered by chosen contents */
 const filterByDropdown = content => {
-    
+    const contract = document.querySelectorAll('.l-jobs__container__details__wrap__info__contract')
+    const location = document.querySelectorAll('.l-jobs__container__details__wrap__info__location')
+    console.log(contract, location);
 };
+
+filterByDropdown();
