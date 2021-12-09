@@ -8,13 +8,19 @@
     justify-content: center;
 }
 
-.dropdown-filter__container {
-    width: 25%;
+.dropdown-role__container,
+.dropdown-level__container,
+.dropdown-contact__container,
+.dropdown-location__container {
+    width: 20%;
     padding-right: .5rem;
     padding-left: .5rem;
 }
 
-.dropdown-filter__title-container {
+.dropdown-role__title-container,
+.dropdown-level__title-container,
+.dropdown-contact__title-container,
+.dropdown-location__title-container {
     padding: .5rem;
     background-color: #FFFFFF;
     color: #5ea4a4;
@@ -24,26 +30,41 @@
     border-radius: 5px;
 }
 
-.dropdown-filter__button {
+.dropdown-role__button,
+.dropdown-level__button
+.dropdown-contact__button
+.dropdown-location__button {
     font-size: 1.2rem;
 }
 
-.dropdown-filter__contents {
+.dropdown-role__contents,
+.dropdown-level__contents,
+.dropdown-contact__contents,
+.dropdown-location__contents {
     display: none;
     background-color: #FFFFFF;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
 }
 
-.dropdown-filter__contents ul {
+.dropdown-role__contents ul,
+.dropdown-level__contents ul,
+.dropdown-contact__contents ul,
+.dropdown-location__contents ul {
     padding: .5rem 1rem;
 }
 
-.dropdown-filter__contents li {
+.dropdown-role__contents li,
+.dropdown-level__contents li,
+.dropdown-contact__contents li,
+.dropdown-location__contents li {
     padding: .2rem;
     cursor: pointer;
 }
 
-.dropdown-filter__contents li:hover {
+.dropdown-role__contents li:hover,
+.dropdown-level__contents li:hover,
+.dropdown-contact__contents li:hover,
+.dropdown-location__contents li:hover {
     background-color: #eef6f6;
 }
