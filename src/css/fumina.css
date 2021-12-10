@@ -10,7 +10,7 @@ body {
 }
 
 .l-jobs {
-  padding: 100px 0;
+  padding: 50px 0;
 }
 
 .l-jobs__container {
@@ -164,7 +164,15 @@ body {
   color: white;
 }
 
-@media screen and (min-width: 768px) {
+.display {
+  display: block;
+}
+
+.none {
+  display: none;
+}
+
+@media screen and (min-width: 376px) {
   .l-header {
     background-image: url("../images/bg-header-desktop.svg");
     height: 7rem;

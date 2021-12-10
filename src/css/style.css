@@ -15,35 +15,45 @@ body {
   width: 70%;
   background-color: rgb(255, 255, 255);
   border-radius: 0.2rem;
-  align-items: center;
   display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  align-items: center;
   justify-content: space-between;
-  padding: 15px 0px;
+  padding: 15px;
   margin-top: 2.5rem;
   margin-right: auto;
   margin-left: auto;
+  overflow-x: scroll;
 }
 
-.filter__field {
-  margin-left: 1rem;
-  font-size: 1rem;
-}
-
-.filter__element_container {
+.filter .tag {
+  height: 30px;
+  padding: 5px 6px;
   background-color: hsl(180, 31%, 95%);
   border-radius: 0.2rem;
   display: flex;
-  justify-content: space-around;
-  margin-left: 2rem;
+  align-items: center;
+  margin-right: 11px;
 }
 
-.filter__element_name {
+/* input */
+.filter__field {
+  padding: 5px;
+  font-size: 16px;
+  border: 0;
+  outline: none;
+  color: hsl(180, 8%, 52%);
+  flex: 1;
+}
+
+.filter span {
   color: hsl(180, 8%, 52%);
   font-size: 1rem;
   padding: 0.5rem 1rem;
 }
 
-.filter__element_delete {
+.filter i {
   background-color: hsl(180, 8%, 52%);
   border-radius: 0.2rem;
   text-align: center;
@@ -52,7 +62,7 @@ body {
   padding: 0.2rem 0.4rem 0.1rem;
 }
 
-.filter__element_delete:hover {
+.filter i:hover {
   background-color: hsl(180, 14%, 20%);
 }
 
@@ -63,18 +73,4 @@ body {
   margin-right: 2rem;
   padding: 0.5rem;
   font-size: 1rem;
-}
-
-.container {
-  margin: auto 3rem;
-  margin-top: 3rem;
-}
-.item-list {
-  margin-bottom: 1rem;
-  background-color: rgb(255, 255, 255);
-  list-style: none;
-  height: 3rem;
-}
-.item-list:hover {
-  border-left: 3px solid rgb(94, 164, 164);
 }
