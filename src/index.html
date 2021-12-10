@@ -17,6 +17,7 @@
     <link href="./css/grids.css" rel="stylesheet" />
     <link href="./css/fumina.css" rel="stylesheet" />
     <link href="./css/destyle.css" rel="stylesheet" />
+    <link href="./css/dark-theme.css" rel="stylesheet" />
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
@@ -28,6 +29,13 @@
 
     <header class="l-header"></header>
     <main>
+      <div class="theme-switch-wrapper">
+        <label class="theme-switch" for="checkbox">
+            <input type="checkbox" id="checkbox" />
+            <div class="slider round"></div>
+        </label>
+        <em>Enable Dark Mode!</em>
+      </div>
       <div class="filter">
         <!-- <input
           type="text"
@@ -57,7 +65,6 @@
       <div class="l-jobs" id="jobsTable"></div>
     </main>
     <footer></footer>
-
     <script src="./js/script.js"></script>
   </body>
 </html>

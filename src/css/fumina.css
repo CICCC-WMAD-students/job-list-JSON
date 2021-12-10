@@ -1,11 +1,11 @@
 body {
-  background-color: #f0fafb;
+  background-color: var(--bg-color);
   font-family: "Montserrat", sans-serif;
   cursor: pointer;
 }
 
 .l-header {
-  background-color: #5ea4a4;
+  background-color: var(--secondary-color);
   width: 100%;
 }
 
