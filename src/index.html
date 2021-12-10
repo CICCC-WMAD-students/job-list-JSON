@@ -14,7 +14,6 @@
       rel="stylesheet"
     />
     <link href="./css/style.css" rel="stylesheet" />
-    <link href="./css/grids.css" rel="stylesheet" />
     <link href="./css/fumina.css" rel="stylesheet" />
     <link href="./css/destyle.css" rel="stylesheet" />
     <link href="./css/dark-theme.css" rel="stylesheet" />
@@ -26,7 +25,6 @@
   </head>
   <body>
     <!-- <header class="header"></header> -->
-
     <header class="l-header"></header>
     <main>
       <div class="theme-switch-wrapper">
@@ -36,35 +34,22 @@
         </label>
         <em>Enable Dark Mode!</em>
       </div>
-      <div class="filter">
-        <!-- <input
+      <!-- filter -->
+      <div class="filter" id="searchWrapper">
+        <input
           type="text"
+          name="searchBar"
+          id="searchBar"
           class="filter__field"
           placeholder="Search for jobs..."
-        /> -->
-        <div class="filter__element_container">
-          <div class="filter__element_name">Frontend</div>
-          <button class="filter__element_delete">
-            <span class="material-icons"> clear </span>
-          </button>
-        </div>
-        <button class="filter__clear_btn">
-          <span>clear</span>
-        </button>
+        />
       </div>
-
-      <div class="container">
-        <ul class="items">
-          <li class="item-list">1</li>
-          <li class="item-list">2</li>
-          <li class="item-list">3</li>
-          <li class="item-list">4</li>
-        </ul>
-      </div> -->
       <!-- json -->
-      <div class="l-jobs" id="jobsTable"></div>
+      <div id="jobsList" class="l-jobs"></div>
     </main>
     <footer></footer>
+    
+    <script src="./js/app.js"></script>
     <script src="./js/script.js"></script>
   </body>
 </html>
