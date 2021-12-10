@@ -17,6 +17,7 @@
     <link href="./css/fumina.css" rel="stylesheet" />
     <link href="./css/destyle.css" rel="stylesheet" />
     <link href="./css/dark-theme.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/filter.css" />
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
@@ -44,6 +45,48 @@
           placeholder="Search for jobs..."
         />
       </div>
+
+      <section class="dropdown-filter">
+        <!-- Dropdown filter by contract -->
+        <div class="dropdown-contract__container">
+          <div class="dropdown-contract__title-container">
+            <button class="dropdown-contract__button">Contract</button>
+            <img
+              class="arrow-button"
+              src="./images/arrow_drop_down_black_24dp.svg"
+              alt="arrow_drop_down"
+            />
+          </div>
+          <div class="dropdown dropdown-contract__contents">
+            <ul>
+              <li>Full Time</li>
+              <li>Part Time</li>
+              <li>Contract</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Dropdown filter by location -->
+        <div class="dropdown-location__container">
+          <div class="dropdown-location__title-container">
+            <button class="dropdown-location__button">Location</button>
+            <img
+              class="arrow-button"
+              src="./images/arrow_drop_down_black_24dp.svg"
+              alt="arrow_drop_down"
+            />
+          </div>
+          <div class="dropdown dropdown-location__contents">
+            <ul>
+              <li>USA Only</li>
+              <li>UK Only</li>
+              <li>Worldwide</li>
+              <li>Remote</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
       <!-- json -->
       <div id="jobsList" class="l-jobs"></div>
     </main>
