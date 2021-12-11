@@ -1,11 +1,11 @@
 body {
-  background-color: #f0fafb;
+  background-color: var(--bg-color);
   font-family: "Montserrat", sans-serif;
   cursor: pointer;
 }
 
 .l-header {
-  background-color: #5ea4a4;
+  background-color: var(--secondary-color);
   width: 100%;
 }
 
@@ -17,6 +17,13 @@ body {
   width: 80%;
   background-color: white;
   margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
   -webkit-box-shadow: 5px 8px 13px #aed4d4;
           box-shadow: 5px 8px 13px #aed4d4;
   border-radius: 5px;
@@ -25,11 +32,26 @@ body {
 .l-jobs__container:hover {
   border-left: 0.2rem solid #5ea4a4;
 }
+.l-jobs__container:hover {
+  border-left: 3px solid rgb(94, 164, 164);
+}
 
 .l-jobs__container__details {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 30px;
 }
 
 .l-jobs__container__details__logo {
@@ -40,6 +62,18 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 0.5rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -48,12 +82,12 @@ body {
 }
 
 .l-jobs__container__details__wrap__tags__company {
-  color: #5ea4a4;
+  color: rgb(94, 164, 164);
   margin-right: 20px;
 }
 
 .l-jobs__container__details__wrap__tags__new {
-  background-color: #5ea4a4;
+  background-color: rgb(94, 164, 164);
   color: white;
   border-radius: 20px;
   padding: 5px 10px;
@@ -61,7 +95,7 @@ body {
 }
 
 .l-jobs__container__details__wrap__tags__featured {
-  background-color: #2c3a3a;
+  background-color: rgb(57, 65, 65);
   color: white;
   border-radius: 20px;
   padding: 5px 10px;
@@ -70,13 +104,16 @@ body {
 .l-jobs__container__details__wrap__position {
   font-size: 18px;
   font-weight: 900;
-  color: #2c3a3a;
+  color: black;
 }
 
 .l-jobs__container__details__wrap__info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   font-size: 14px;
   color: #7b8e8e;
 }
@@ -96,10 +133,24 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   margin-right: 20px;
 }
 
 .l-jobs__container__skills li {
+  background-color: rgb(240, 250, 251);
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin-right: 10px;
+  color: rgb(94, 164, 164);
+  font-size: 14px;
+}
+/*# sourceMappingURL=fumina.css.map */
   background-color: #eef6f6;
   border-radius: 5px;
   padding: 5px 10px;
