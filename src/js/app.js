@@ -8,19 +8,27 @@
 
 const jobsList = document.getElementById('jobsList');
 const searchBar = document.getElementById('searchBar');
+// const searchButton = document.getElementById('searchButton');
+// console.log(searchButton);
 let jobData = [];
 
 searchBar.addEventListener('keyup', e => {
+  if (e.key === 'Enter') {
+
   const searchString = e.target.value.toLowerCase();
 
   const filteredJobs = jobData.filter(job => {
     return (
       job.role.toLowerCase().includes(searchString) ||
-      job.level.toLowerCase().includes(searchString)
+      job.company.toLowerCase().includes(searchString) ||
+      job.position.toLowerCase().includes(searchString) 
     );
   });
+
   displayJobs(filteredJobs);
+}
 });
+
 
 const loadjobs = async () => {
   try {
