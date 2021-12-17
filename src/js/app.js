@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 /*
 -----------------------------------
@@ -6,14 +6,15 @@
 -----------------------------------
 */
 
-const jobsList = document.getElementById('jobsList');
-const searchBar = document.getElementById('searchBar');
+const jobsList = document.getElementById("jobsList");
+const searchBar = document.getElementById("searchBar");
+const tagsFilter = document.getElementById("tagsFilter");
 let jobData = [];
 
-searchBar.addEventListener('keyup', e => {
+searchBar.addEventListener("keyup", (e) => {
   const searchString = e.target.value.toLowerCase();
 
-  const filteredJobs = jobData.filter(job => {
+  const filteredJobs = jobData.filter((job) => {
     return (
       job.role.toLowerCase().includes(searchString) ||
       job.level.toLowerCase().includes(searchString)
@@ -24,20 +25,20 @@ searchBar.addEventListener('keyup', e => {
 
 const loadjobs = async () => {
   try {
-    const res = await fetch('../data.json');
+    const res = await fetch("../data.json");
     jobData = await res.json();
-    console.log(jobData);
     displayJobs(jobData);
+    displayTags(jobData);
   } catch (err) {
     console.log(err);
   }
 };
 
-const displayJobs = jobs => {
+const displayJobs = (jobs) => {
   const htmlString = jobs
-    .map(job => {
-      let display = 'display';
-      let none = 'none';
+    .map((job) => {
+      let display = "display";
+      let none = "none";
       //arr
       let language = job.language;
 
@@ -80,28 +81,87 @@ const displayJobs = jobs => {
         </div>       
         `;
     })
-    .join('');
+    .join("");
   jobsList.innerHTML = htmlString;
 
   for (let i = 0; i < jobs.length; i++) {
-    const parent = document.querySelectorAll('.l-jobs__container__skills')[i];
+    const parent = document.querySelectorAll(".l-jobs__container__skills")[i];
     const languages = jobs[i].languages;
     const tools = jobs[i].tools;
 
     for (let j = 0; j < languages.length; j++) {
-      const li = document.createElement('li');
-      li.className = 'l-jobs__container__skills__languages';
+      const li = document.createElement("li");
+      li.className = "l-jobs__container__skills__languages";
       li.innerHTML = languages[j];
       parent.appendChild(li);
     }
 
     for (let k = 0; k < tools.length; k++) {
-      const li = document.createElement('li');
-      li.className = 'l-jobs__container__skills__tools';
+      const li = document.createElement("li");
+      li.className = "l-jobs__container__skills__tools";
       li.innerHTML = tools[k];
       parent.appendChild(li);
     }
   }
+};
+
+const displayTags = (tags) => {
+  const tagsArr = tags.map((tag) => {
+    return tag.role, tag.contract, tag.location;
+  });
+
+  for (let i = 0; i < tags.length; i++) {
+    const languages = tags[i].languages;
+    const tools = tags[i].tools;
+
+    for (let j = 0; j < languages.length; j++) {
+      tagsArr.push(languages[j]);
+    }
+
+    for (let k = 0; k < tools.length; k++) {
+      tagsArr.push(tools[k]);
+    }
+  }
+
+  //try not to pick same tags
+  const newTagsArr = [...new Set(tagsArr)];
+
+  const htmlString = newTagsArr
+    .map((tag) => {
+      return `
+      <li id="js-filter-target">${tag}</li>
+    `;
+    })
+    .join("");
+  tagsFilter.innerHTML = htmlString;
+
+  // let targetTag = document.querySelectorAll("#js-filter-target");
+
+  // targetTag.addEventListener(
+  //   "click",
+  //   function () {
+  //     //change style
+  //     this.classList.toggle("tag-filtered");
+  //   },
+  //   false
+  // );
+
+  tagsFilter.addEventListener(
+    "click",
+    function () {
+      //show clear btn
+      const clearBtn = document.createElement("p");
+      const clearIcon = document.createElement("i");
+      const parent = document.querySelector(".tags-filter-container");
+      clearBtn.innerHTML = "clear";
+      clearBtn.className = "clear-btn";
+      clearIcon.innerHTML = "close";
+      clearIcon.className = "material-icons";
+      parent.appendChild(clearBtn);
+      clearBtn.appendChild(clearIcon);
+    },
+    { once: true }
+  );
 };
 
 loadjobs();
@@ -112,27 +172,27 @@ loadjobs();
 -----------------------------------
 */
 
-const tagContainer = document.querySelector('.filter');
-const input = document.querySelector('.filter input');
+const tagContainer = document.querySelector(".filter");
+const input = document.querySelector(".filter input");
 
 let tags = [];
 
 function createTag(label) {
-  const div = document.createElement('div');
-  div.setAttribute('class', 'tag');
-  const span = document.createElement('span');
+  const div = document.createElement("div");
+  div.setAttribute("class", "tag");
+  const span = document.createElement("span");
   span.innerHTML = label;
-  const closeIcon = document.createElement('i');
-  closeIcon.innerHTML = 'close';
-  closeIcon.setAttribute('class', 'material-icons');
-  closeIcon.setAttribute('data-item', label);
+  const closeIcon = document.createElement("i");
+  closeIcon.innerHTML = "close";
+  closeIcon.setAttribute("class", "material-icons");
+  closeIcon.setAttribute("data-item", label);
   div.appendChild(span);
   div.appendChild(closeIcon);
   return div;
 }
 
 function clearTags() {
-  document.querySelectorAll('.tag').forEach(tag => {
+  document.querySelectorAll(".tag").forEach((tag) => {
     tag.parentElement.removeChild(tag);
   });
 }
@@ -142,24 +202,24 @@ function addTags() {
   tags
     .slice()
     .reverse()
-    .forEach(tag => {
+    .forEach((tag) => {
       tagContainer.prepend(createTag(tag));
     });
 }
 
-input.addEventListener('keyup', e => {
-  if (e.key === 'Enter') {
-    e.target.value.split(',').forEach(tag => {
+input.addEventListener("keyup", (e) => {
+  if (e.key === "Enter") {
+    e.target.value.split(",").forEach((tag) => {
       tags.push(tag);
     });
 
     addTags();
-    input.value = '';
+    input.value = "";
   }
 });
-document.addEventListener('click', e => {
-  if (e.target.tagName === 'I') {
-    const tagLabel = e.target.getAttribute('data-item');
+document.addEventListener("click", (e) => {
+  if (e.target.tagName === "I") {
+    const tagLabel = e.target.getAttribute("data-item");
     const index = tags.indexOf(tagLabel);
     tags = [...tags.slice(0, index), ...tags.slice(index + 1)];
     addTags();
@@ -173,15 +233,15 @@ input.focus();
 /*-------------------------------------------------*/
 
 /* Implementing Filters */
-const dropdownButtons = document.querySelectorAll('.arrow-button');
-const dropdownContent = document.querySelectorAll('.dropdown');
-const dropdownLi = document.getElementsByTagName('li');
+const dropdownButtons = document.querySelectorAll(".arrow-button");
+const dropdownContent = document.querySelectorAll(".dropdown");
+const dropdownLi = document.getElementsByTagName("li");
 
 /* When the user clicks on the button,
 toggle between hiding and showing the dropdown content */
 for (let i = 0; i < dropdownButtons.length; i++) {
-  dropdownButtons[i].addEventListener('click', () => {
-    dropdownContent[i].classList.toggle('show');
+  dropdownButtons[i].addEventListener("click", () => {
+    dropdownContent[i].classList.toggle("show");
   });
 }
 
@@ -194,8 +254,8 @@ for (let i = 0; i < dropdownButtons.length; i++) {
 let selectedContent = [];
 
 for (let i = 0; i < dropdownLi.length; i++) {
-  dropdownLi[i].addEventListener('click', () => {
-    dropdownLi[i].classList.toggle('selected');
+  dropdownLi[i].addEventListener("click", () => {
+    dropdownLi[i].classList.toggle("selected");
 
     if (selectedContent.includes(dropdownLi[i].textContent)) {
       const index = selectedContent.indexOf(dropdownLi[i].textContent);
@@ -207,7 +267,7 @@ for (let i = 0; i < dropdownLi.length; i++) {
 
     console.log(selectedContent);
 
-    const dropdownFilteredJobs = jobData.filter(job => {
+    const dropdownFilteredJobs = jobData.filter((job) => {
       return (
         selectedContent.indexOf(job.contract) > -1 ||
         selectedContent.indexOf(job.location) > -1
@@ -218,16 +278,17 @@ for (let i = 0; i < dropdownLi.length; i++) {
 }
 
 // Dark theme toggle
-const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+const toggleSwitch = document.querySelector(
+  '.theme-switch input[type="checkbox"]'
+);
 
 const switchTheme = (e) => {
   if (e.target.checked) {
-    document.documentElement.setAttribute('data-theme', 'dark');
+    document.documentElement.setAttribute("data-theme", "dark");
+  } else {
+    document.documentElement.setAttribute("data-theme", "light");
   }
-  else {
-    document.documentElement.setAttribute('data-theme', 'light');
-  }    
-}
+};
 
-toggleSwitch.addEventListener('change', switchTheme);
+toggleSwitch.addEventListener("change", switchTheme);
 // Dark theme toggle end
