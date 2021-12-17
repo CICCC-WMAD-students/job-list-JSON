@@ -30,12 +30,12 @@
     <main>
       <div class="theme-switch-wrapper">
         <label class="theme-switch" for="checkbox">
-            <input type="checkbox" id="checkbox" />
-            <div class="slider round"></div>
+          <input type="checkbox" id="checkbox" />
+          <div class="slider round"></div>
         </label>
         <em>Enable Dark Mode!</em>
       </div>
-      <!-- filter -->
+      <!-- Search Bar -->
       <div class="filter" id="searchWrapper">
         <input
           type="text"
@@ -47,9 +47,14 @@
         <!-- <button type="submit" id="searchButton">Go</button> -->
       </div>
 
-      <section class="dropdown-filter">
+      <!-- Tags filter -->
+      <div class="tags-filter-container">
+        <ul id="tagsFilter"></ul>
+      </div>
+
+      <!-- <section class="dropdown-filter">
         <!-- Dropdown filter by contract -->
-        <div class="dropdown-contract__container">
+      <!-- <div class="dropdown-contract__container">
           <div class="dropdown-contract__title-container">
             <button class="dropdown-contract__button">Contract</button>
             <img
@@ -65,10 +70,10 @@
               <li>Contract</li>
             </ul>
           </div>
-        </div>
+        </div> -->
 
-        <!-- Dropdown filter by location -->
-        <div class="dropdown-location__container">
+      <!-- Dropdown filter by location -->
+      <!-- <div class="dropdown-location__container">
           <div class="dropdown-location__title-container">
             <button class="dropdown-location__button">Location</button>
             <img
@@ -86,13 +91,13 @@
             </ul>
           </div>
         </div>
-      </section>
+      </section> -->
 
       <!-- json -->
       <div id="jobsList" class="l-jobs"></div>
     </main>
     <footer></footer>
-    
+
     <script src="./js/app.js"></script>
   </body>
 </html>
