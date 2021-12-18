@@ -151,13 +151,13 @@ const displayTags = tags => {
   //   false
   // );
 
+  const clearBtn = document.createElement('p');
+  const clearIcon = document.createElement('i');
+  const parent = document.querySelector('.tags-filter-container');
   tagsFilter.addEventListener(
     'click',
     function () {
       //show clear btn
-      const clearBtn = document.createElement('p');
-      const clearIcon = document.createElement('i');
-      const parent = document.querySelector('.tags-filter-container');
       clearBtn.innerHTML = 'clear';
       clearBtn.className = 'clear-btn';
       clearIcon.innerHTML = 'close';
@@ -173,6 +173,13 @@ const displayTags = tags => {
   let filteredByTags = [];
   const tagsFromDOM = document.querySelectorAll('.js-filter-target');
   console.log(tagsFromDOM);
+
+  // Event listener on clear button
+  clearBtn.addEventListener('click', () => {
+    selectedTags = [];
+    console.log(selectedTags);
+    tagsFromDOM.forEach(tag => tag.classList.remove('selected'));
+  });
 
   for (let l = 0; l < tagsFromDOM.length; l++) {
     tagsFromDOM[l].addEventListener('click', () => {
