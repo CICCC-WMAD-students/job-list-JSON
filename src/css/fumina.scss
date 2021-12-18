@@ -1,6 +1,6 @@
 body {
   background-color: rgb(240, 250, 251);
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 .l-header {
   background-color: rgb(94, 164, 164);
@@ -64,7 +64,7 @@ body {
 
         &__info li {
           &:not(:last-child)::after {
-            content: "";
+            content: '';
             width: 4px;
             height: 4px;
             display: inline-block;
@@ -120,16 +120,22 @@ body {
     align-items: center;
     flex-wrap: wrap;
     padding-top: 30px;
-    li {
-      background-color: #e0f6f6;
-      border-radius: 5px;
-      padding: 5px 10px;
-      margin-right: 10px;
-      color: #5ea4a4;
-      font-size: 14px;
-      margin-bottom: 10px;
-      cursor: pointer;
-    }
+  }
+
+  .js-filter-target {
+    background-color: #e0f6f6;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-right: 10px;
+    color: #5ea4a4;
+    font-size: 14px;
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+
+  .selected {
+    color: #e0f6f6;
+    background-color: #5ea4a4;
   }
 }
 
@@ -144,7 +150,7 @@ body {
 //PC
 @media screen and (min-width: 376px) {
   .l-header {
-    background-image: url("../images/bg-header-desktop.svg");
+    background-image: url('../images/bg-header-desktop.svg');
     height: 7rem;
   }
 
@@ -187,7 +193,7 @@ body {
 //SP
 @media screen and (max-width: 375px) {
   .l-header {
-    background-image: url("../images/bg-header-mobile.svg");
+    background-image: url('../images/bg-header-mobile.svg');
     background-size: cover;
     height: 10rem;
   }

@@ -1,0 +1,23 @@
+{
+  "name": "job-list-JSON",
+  "version": "1.0.0",
+  "description": "Your challenge is to build out a jobs listing using a local data.json to retrieve the data.",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass src/css/fumina.scss src/css/fumina.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AyakaYasuda/job-list-JSON.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AyakaYasuda/job-list-JSON/issues"
+  },
+  "homepage": "https://github.com/AyakaYasuda/job-list-JSON#readme",
+  "dependencies": {
+    "sass": "^1.45.0"
+  }
+}
