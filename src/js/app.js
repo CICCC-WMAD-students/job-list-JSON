@@ -179,6 +179,7 @@ const displayTags = tags => {
     selectedTags = [];
     console.log(selectedTags);
     tagsFromDOM.forEach(tag => tag.classList.remove('selected'));
+    displayJobs(jobData);
   });
 
   for (let l = 0; l < tagsFromDOM.length; l++) {
