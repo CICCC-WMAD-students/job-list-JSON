@@ -1,6 +1,6 @@
 body {
   background-color: rgb(240, 250, 251);
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   cursor: pointer;
 }
 .l-header {
@@ -65,7 +65,7 @@ body {
 
         &__info li {
           &:not(:last-child)::after {
-            content: "";
+            content: '';
             width: 4px;
             height: 4px;
             display: inline-block;
@@ -81,6 +81,7 @@ body {
     &__skills {
       display: flex;
       margin-right: 20px;
+      flex-wrap: wrap;
     }
     &__skills li {
       background-color: hsl(180, 31%, 95%);
@@ -106,10 +107,9 @@ body {
   display: none;
 }
 
-//PC
 @media screen and (min-width: 376px) {
   .l-header {
-    background-image: url("../images/bg-header-desktop.svg");
+    background-image: url('../images/bg-header-desktop.svg');
     height: 7rem;
   }
 
@@ -149,49 +149,49 @@ body {
   }
 }
 
-//SP
-@media screen and (max-width: 375px) {
-  .l-header {
-    background-image: url("../images/bg-header-mobile.svg");
-    background-size: cover;
-    height: 10rem;
-  }
+// //SP
+// @media only screen and (max-width: 500px) {
+//   .l-header {
+//     background-image: url('../images/bg-header-mobile.svg');
+//     background-size: cover;
+//     height: 10rem;
+//   }
 
-  .l-jobs {
-    &__container {
-      margin-bottom: 50px;
-      &__details {
-        position: relative;
-        padding: 60px 20px 0px;
-        &__logo {
-          position: absolute;
-          top: -1rem;
-          width: 60px;
-          height: 60px;
-        }
+//   .l-jobs {
+//     &__container {
+//       margin-bottom: 50px;
+//       &__details {
+//         position: relative;
+//         padding: 60px 20px 0px;
+//         &__logo {
+//           position: absolute;
+//           top: -1rem;
+//           width: 60px;
+//           height: 60px;
+//         }
 
-        &__wrap {
-          border-bottom: 0.05rem solid hsl(180, 8%, 52%);
-          padding-bottom: 20px;
-          &__tags {
-            margin-bottom: 1rem;
-            font-weight: 900;
-          }
-          &__position {
-            margin-bottom: 1.2rem;
-          }
-        }
-      }
+//         &__wrap {
+//           border-bottom: 0.05rem solid hsl(180, 8%, 52%);
+//           padding-bottom: 20px;
+//           &__tags {
+//             margin-bottom: 1rem;
+//             font-weight: 900;
+//           }
+//           &__position {
+//             margin-bottom: 1.2rem;
+//           }
+//         }
+//       }
 
-      &__skills {
-        display: flex;
-        flex-wrap: wrap;
-        padding: 20px 20px 0;
-      }
+//       &__skills {
+//         display: flex;
+//         flex-wrap: wrap;
+//         padding: 20px 20px 0;
+//       }
 
-      &__skills li {
-        margin-bottom: 20px;
-      }
-    }
-  }
-}
+//       &__skills li {
+//         margin-bottom: 20px;
+//       }
+//     }
+//   }
+// }

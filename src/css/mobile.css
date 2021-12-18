@@ -1,0 +1,57 @@
+@media only screen and (max-width: 768px) {
+  header {
+    background: url('../images/bg-header-mobile.svg') center center/cover;
+    height: 6rem;
+  }
+
+  main .theme-switch-wrapper {
+    display: none;
+  }
+
+  main #searchWrapper {
+    width: 90%;
+    margin: 20px auto 0;
+    padding: 10px;
+  }
+
+  main section.dropdown-filter {
+    display: none;
+  }
+
+  #jobsList .l-jobs__container {
+    width: 90%;
+    margin-bottom: 50px;
+    padding: 60px 10px 10px 10px;
+    box-shadow: 5px 5px 10px rgb(174, 212, 212);
+    flex-wrap: wrap;
+  }
+
+  .l-jobs__container__details {
+    position: relative;
+    margin: 0;
+  }
+
+  .l-jobs__container__details__logo {
+    position: absolute;
+    top: -70px;
+    left: 5px;
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+    align-self: center;
+  }
+
+  .l-jobs__container__details__wrap__position {
+    margin: 10px 0;
+  }
+
+  .l-jobs__container__skills {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 2px dotted #ced4da;
+  }
+
+  .l-jobs__container__skills li {
+    margin: 5px;
+  }
+} ;
