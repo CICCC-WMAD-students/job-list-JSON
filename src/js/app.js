@@ -130,7 +130,6 @@ const displayTags = tags => {
 
   //try not to pick same tags
   const newTagsArr = [...new Set(tagsArr)];
-  console.log(newTagsArr);
 
   const htmlString = newTagsArr
     .map(tag => {
@@ -170,25 +169,45 @@ const displayTags = tags => {
   );
 
   /* Implementing filters by selected tags */
+  let selectedTags = [];
   let filteredByTags = [];
-  // const comparedArray = [jobData.location, jobData.tools, ...jobData.languages]
   const tagsFromDOM = document.querySelectorAll('.js-filter-target');
   console.log(tagsFromDOM);
-  
+
   for (let l = 0; l < tagsFromDOM.length; l++) {
     tagsFromDOM[l].addEventListener('click', () => {
       tagsFromDOM[l].classList.toggle('selected');
-      const selectedTags = document.querySelectorAll('.selected');
-      console.log(selectedTags);
-    });
 
-    const arr = jobData.map(job => {
-      const tagArr = [job.location, ...job.tools, ...job.languages]
-      console.log(tagArr);
-      const jobArr = Object.entries(job)         
+      if (selectedTags.includes(tagsFromDOM[l].id)) {
+        const index = selectedTags.indexOf(tagsFromDOM[l].id);
+        selectedTags.splice(index, 1);
+      } else {
+        selectedTags.push(tagsFromDOM[l].id);
+      }
+      console.log(selectedTags);
+
+      for (let m = 0; m < jobData.length; m++) {
+        let booleanLocation = selectedTags.includes(jobData[m].location)
+          ? true
+          : false;
+        // console.log(booleanLocation);
+
+        let booleanLanguages = selectedTags.includes(...jobData[m].languages)
+          ? true
+          : false;
+        // console.log(booleanLanguages);
+
+        let booleanTools = selectedTags.includes(...jobData[m].tools)
+          ? true
+          : false;
+        // console.log(booleanTools);
+
+        if (booleanLocation || booleanLanguages || booleanTools) {
+          filteredByTags.push(jobData[m]);
+          displayJobs(filteredByTags);
+        }
+      }
     });
-    
-    
   }
 };
 
